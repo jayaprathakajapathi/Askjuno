@@ -18,9 +18,9 @@ public  AddSaveListener(AttachmentContainer attachmentScreen,Attachment attachme
 }
 	@Override
 	public void onComponentEvent(ClickEvent<Button> event) {
-		attachmentScreen.addAttachment();
-		attachmentScreen.createCard(attachment);
-		
+		/*
+		 * attachmentScreen.addAttachment(); attachmentScreen.createCard(attachment);
+		 */
 	}
 
 }

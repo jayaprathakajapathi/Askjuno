@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
+import java.util.Objects;
 
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
@@ -25,6 +26,8 @@ import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.notification.Notification.Position;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.upload.Upload;
@@ -33,42 +36,51 @@ import com.vaadin.flow.internal.MessageDigestUtil;
 import com.vaadin.flow.server.StreamResource;
 
 public class AttachmentUploadContainer {
-	
 
+	private final AttachmentUploadWidget attachmentUploadWidget;
 	private FormLayout uploadLayout;
 	private MultiFileMemoryBuffer uploadBuffer;
 	private Div uploadOutput;
+	public Upload upload;
 
-	public AttachmentUploadContainer() {
-		
+	public AttachmentUploadContainer(AttachmentUploadWidget attachmentUploadWidget) {
+		this.attachmentUploadWidget = attachmentUploadWidget;
 	}
-	
+
 	public FormLayout buildayout() {
 
 		uploadLayout = new FormLayout();
 
 		uploadBuffer = new MultiFileMemoryBuffer();
-		Upload upload = new Upload(uploadBuffer);
+		upload = new Upload(uploadBuffer);
 		upload.setAcceptedFileTypes("image/jpeg", "image/png", "image/gif", "application/pdf",
 				"application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 				"application/vnd.openxmlformats-officedocument.presentationml.presentation", "text/csv", "text/html");
 		uploadOutput = new Div();
 
 		upload.addSucceededListener(event -> {
+			
+			String fileName = event.getFileName();
+			InputStream fileData = uploadBuffer.getInputStream(fileName);
+			long contentLength = event.getContentLength();
+			String mimeType = event.getMIMEType();
+			
 			Component component = createComponent(event.getMIMEType(), event.getFileName(),
 					uploadBuffer.getInputStream(event.getFileName()));
 			showOutput(event.getFileName(), component, uploadOutput);
+
 		});
 		upload.addFileRejectedListener(event -> {
 			Paragraph component = new Paragraph();
 			showOutput(event.getErrorMessage(), component, uploadOutput);
 		});
-		
-	//	this.uploadLayout.add(uploadBuffer, uploadLayout);
-		
-		return this.uploadLayout; 
 
-}
+		this.uploadLayout.add(upload, uploadOutput);
+
+		return this.uploadLayout;
+
+	}
+
 	private Component createComponent(String mimeType, String fileName, InputStream stream) {
 		if (mimeType.startsWith("text")) {
 			return createTextComponent(stream);
@@ -121,5 +133,28 @@ public class AttachmentUploadContainer {
 		p.getElement().setText(text);
 		outputContainer.add(p);
 		outputContainer.add(content);
+
+	}
+
+	public void validate() {
+		if (uploadOutput.getChildren().count() > 0) {
+
+			if (!attachmentUploadWidget.getName().isEmpty()) {
+
+				attachmentUploadWidget.createCard();
+			} else {
+				Notification.show("Name cannot be empty", 1000, Position.TOP_CENTER);
+			}
+		} else {
+			Notification.show("file cannot be empty", 1000, Position.TOP_CENTER);
+		}
+
+	}
+
+	public void clear() {
+		this.uploadOutput.getChildren().filter(Image.class::isInstance).map(Image.class::cast).forEach(image->{
+			
+		});
+		
 	}
 }
