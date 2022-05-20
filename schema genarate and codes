@@ -1,0 +1,33 @@
+public static XContentBuilder menuItemSchemaAsXContent() throws
+	 CaseyException { MappingBuilder mappingBuilder = new MappingBuilderImpl();
+	 Class<RolebasedMenu> schemaClass = RolebasedMenu.class; return
+	 SchemaGeneratorUtil.generateXContent(mappingBuilder, schemaClass); }
+
+@Test
+	public void testCreateGoogleSchema() throws CaseyException
+	{
+		IndexResponse indexResponse = this.ctSvc.createIndex(JunoConstants.GOOGLE_CAMPAIGN_SCHEMA);
+		System.out.println(indexResponse);
+	}	
+	public static String getCampaignDateTime(String dateTimeString) {
+			  try {   
+		    Date date1= new SimpleDateFormat("yyyy-MM-dd").parse(dateTimeString); 
+		    String date2=new SimpleDateFormat("dd MM yyyy").format(date1);
+		  
+		  return date2; } catch (ParseException e) {
+		  logger.error("Error translating date, {}", dateTimeString, e); }
+		return null;
+		 }
+		 
+		 
+		 
+		try {
+			Method method = lead.getClass().getMethod("getId", new Class[] {});
+			Object obj =  method.invoke(lead, new Object[] {});
+			String id=null;
+			if(obj instanceof Long) {
+				id=String.valueOf(obj);
+			}else {
+				id=(String)obj;
+			}
+			return id;

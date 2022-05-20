@@ -1,0 +1,100 @@
+ Binder<Person> binder = new Binder<>();
+        DatePicker datePicker = new DatePicker();
+        binder.forField(datePicker).withConverter(new LocalDateToDateConverter())
+                .bind(Person::getStartDate, Person::setStartDate);
+                
+                
+                binder.forField(countryCode)
+.withValidator(str -> str == null || "".equals(str), "Please select country")
+.withConverter(SystemCountry::toContryCode, SystemCountry::fromContryCode)
+.bind(User::getCountryCode, User::setCountryCode);
+binder.forField(mobile).withValidator(new RegexpValidator("Only 0-9 allowed","\\d*")).bind(Lead::getPhoneNumber, 
+
+LeadDataService svc = new LeadDataService();
+		String id = "jayapratha.kajapathi@gmail.com";
+		Lead lead = svc.fetch(id);
+		lead.setPlatformType("linkedin");
+		svc.update(lead);
+		
+		
+		jbComboBx.setRenderer(new ComponentRenderer<>(item -> {
+		    Span span = new Span(item.getJunoBusinessName());
+		    span.getElement().setProperty("title", item.get());
+		    return span;
+		}));
+		
+		
+		 private JunoBusiness getJunoBusiness(final String junoBusinessId) throws
+	  CaseyException { return junoBusinessDataService.get(junoBusinessId); }
+	  grid.addColumn(CalepUser::getFullName).setHeader("FullName");
+		grid.addColumn(CalepUser::getRole).setHeader("Role");
+		grid.addColumn(CalepUser::getEmailId).setHeader("EmailId");
+		grid.addColumn(CalepUser::getPhoneNumber).setHeader("Phone No");
+userView.jaComboBx.getValue().getJunoAccountName();
+		userView.jaComboBx.getValue().getJunoAccountAlias();
+		userView.jaComboBx.getValue().getJunoAccountId();
+		userView.bizComboBx.getValue().getJunoBusinessAlias();
+		userView.bizComboBx.getValue().getJunoBusinessId();
+		 List<CalepUser> userlist = userService.findAll(null);
+		ListDataProvider<CalepUser> dataProvider = new ListDataProvider<>(userlist);
+		grid.setDataProvider(dataProvider);
+		PersonFilter personFilter = new PersonFilter(dataProvider);
+
+		grid.getHeaderRows().clear();
+		HeaderRow headerRow = grid.appendHeaderRow();
+
+		headerRow.getCell(roleColumn).setComponent(
+				 createFilterHeader("Role", personFilter::setRole));
+		private static Component createFilterHeader(String labelText,
+		        Consumer<String> filterChangeConsumer) {
+		    Label label = new Label(labelText);
+		    label.getStyle().set("padding-top", "var(--lumo-space-m)")
+		            .set("font-size", "var(--lumo-font-size-xs)");
+		    TextField textField = new TextField();
+		    textField.setValueChangeMode(ValueChangeMode.EAGER);
+		    textField.setClearButtonVisible(true);
+		    textField.addThemeVariants(TextFieldVariant.LUMO_SMALL);
+		    textField.setWidthFull();
+		    textField.getStyle().set("max-width", "100%");
+		    textField.addValueChangeListener(
+		            e -> filterChangeConsumer.accept(e.getValue()));
+		    VerticalLayout layout = new VerticalLayout(label, textField);
+		    layout.getThemeList().clear();
+		    layout.getThemeList().add("spacing-xs");
+		    return layout;
+		}
+
+		private static class PersonFilter {
+		    private final ListDataProvider<CalepUser> dataProvider;
+		    private String role;
+		 		    public PersonFilter(ListDataProvider<CalepUser> dataProvider) {
+		        this.dataProvider = dataProvider;
+		        this.dataProvider.addFilter(this::test);
+		    }
+
+		 		   public void setRolee(String role) {
+		 		        this.role = role;
+		 		        this.dataProvider.refreshAll();
+		 		    }
+		    public boolean test(CalepUser calepUser) {
+		        boolean matchesRole = matches(calepUser.getRole(), role);
+		     
+		        return matchesRole ;
+		    }
+
+		    private boolean matches(String value, String searchTerm) {
+		        return searchTerm == null || searchTerm.isEmpty() || value
+		                .toLowerCase().contains(searchTerm.toLowerCase());
+		    }
+		    		    		        
+		/grid.getColumnByKey("selctedItem");
+		//grid.getHeaderRows().    
+		
+	 String[] countries = new String[Locale.getISOCountries().length];
+		    String[] countryCodes = Locale.getISOCountries();
+		    for (int i = 0; i < countryCodes.length; i++) {
+		        Locale obj = new Locale("", countryCodes[i]);
+		        
+		        countries[i] = obj.getDisplayCountry();
+		        countryCode.setItems(countryCodes);
+		    }

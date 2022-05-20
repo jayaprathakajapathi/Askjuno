@@ -1,0 +1,18 @@
+
+23/01/2022
+
+Production  UName :  ssh root@spike.askjuno.com
+Password : xved6b46j
+
+Production Mode Sql : mysql -ucandydrm -ppassword
+
+online server :
+        URL : https://cloud.linode.com
+        UserName : askjuno
+        Password : 8mHjZuNw
+        
+        https://www.linuxsecrets.com/3326-byobu-commands
+        export PRODUCTION_MODE=true
+        mvn spring-boot:run -Dvaadin.productionMode
+        ada.askjuno.com/pricing
+        butterball.askjuno.com

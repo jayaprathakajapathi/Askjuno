@@ -1,0 +1,25 @@
+BUTTON STYLES:
+Button primaryButton = new Button("Primary");
+primaryButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);(PRIMARY,SECONDARY)
+Button primaryButton = new Button("Primary");
+primaryButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY, ButtonVariant.LUMO_ERROR);
+Button tertiaryInlineButton = new Button("Tertiary inline");
+tertiaryInlineButton.addThemeVariants(ButtonVariant.LUMO_TERTIARY_INLINE);
+BUTTON SIZES:
+Button largeButton = new Button("Large");
+largeButton.addThemeVariants(ButtonVariant.LUMO_LARGE);(LARGE,SMALL,NORMAL)
+BUTTON ICONS:
+Button plusButton = new Button(new Icon(VaadinIcon.PLUS));
+plusButton.addThemeVariants(ButtonVariant.LUMO_ICON);
+plusButton.getElement().setAttribute("aria-label", "Add item");
+Button arrowLeftButton = new Button("Left", new Icon(VaadinIcon.ARROW_RIGHT));(left)
+Button button = new Button("Button");
+button.setAutofocus(true);
+Button butt= new Button("click");
+TextField tfield=new TextField("test");
+butt.addClickListener(event -> {
+tfield.setValue("click works");
+});
+logger.info("selected items {}", role.getId());-using to get id from delete function
+ grid.setSelectionMode(SelectionMode.MULTI);  for select multiple choice
+ user.setPhoneNumber(this.junoAccountView.getPhoneNumber().getValue());--set values from given data.

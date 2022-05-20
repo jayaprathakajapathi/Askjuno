@@ -1,0 +1,46 @@
+For google controller 
+Run google ads ajclient mvn spring-boot:run
+butterball mvn spring-boot:run
+:GET:http://localhost:10443/google/downloadCampaigns?junoBusinessId=5600207955248104235
+download Forms http://localhost:10443/google/downloadForms?junoBusinessId=5600207955248104235
+https://www.computerhope.com/htmcolor.htm ----page for color codes
+https://dzone.com/articles/java-string-format-examples--- for string formates
+http://localhost:9200/schema_profile/_update_by_query
+https://opensource.com/article/21/4/git-stash
+casey.store:9200/schema_lap--->for create schema.
+
+1emPC7XuRITr0iR3ApVA1IQCCLjnltiHmN26-TNi3LAQ     gsheetId
+
+1emPC7XuRITr0iR3ApVA1IQCCLjnltiHmN26-TNi3LAQ
+
+GoogleSheetUtil.NEW_LAP_LEAD_RANGE
+Landingpage_Leads-Info!
+create/srushti-halo==create/srushti
+create/srushti-shlok === create/srushtihalo
+
+"junoBusinessId":"6552956640013009072",
+Templates in butteball:
+559721a5-4541-4ef4-ad7c-b79f75398f36
+8976a3f1-68b2-487c-bfef-f70e00e59376
+b85cd663-08c5-4911-a031-2ba5e44b6f8c
+
+http://localhost:10443/lapmanage/create/srushti-shlok?junoBusinessId=4452435608227106570&gSheetId=1emPC7XuRITr0iR3ApVA1IQCCLjnltiHmN26-TNi3LAQ&otpVerification=yes&tenantId=2909&lapId=srushti_shlok_24092016
+
+http://localhost:10443/lapmanage/create/srushti-halo?junoBusinessId=7129146960436740676&gSheetId=1emPC7XuRITr0iR3ApVA1IQCCLjnltiHmN26-TNi3LAQ&otpVerification=yes&tenantId=2909&lapId=srushti_halo_24092016
+
+wget "http://localhost:10443/lapmanage/create/halo?junoBusinessId=7129146960436740676&gSheetId=1emPC7XuRITr0iR3ApVA1IQCCLjnltiHmN26-TNi3LAQ&otpVerification=NO&lapId=halo_24092016"
+
+
+ya29.A0ARrdaM8SPmAkwAARo8pyl28IRSlK69XMQKjegNqHHMYiYXTdPAblAGqr8mXWCzQ0_tzcB80ndvh8995iYI-taazFBoTXPtXER68te637GKfTV3597_-9rpad0z4Ydlz9YPjRidEUV84WQ6BTAC0QCER4N4Mh
+
+
+wget "http://localhost:10443/lapmanage/create/adbuddy?junoBusinessId=7129146960436740676&gSheetId=1emPC7XuRITr0iR3ApVA1IQCCLjnltiHmN26-TNi3LAQ&otpVerification=NO&lapId=Adbuddy_24092016"
+
+ya29.A0ARrdaM8PYW97IQTEeTvoIynET9fI52xkLlomS-0DM3tLCqXa4-Hzhe6PYpQb5iC8i9SF8qvI5NsR105XTj9i1y8XsDnkIZfiO97wLgDYqE2TscKf-sqRA_et70BxvYvvWDkE8_LsFz4AyTiaLw8qUFDw6ZLB
+
+
+wget "http://localhost:10443/lapmanage/create/srushti-halo?junoBusinessId=5196601515374561963&gSheetId=1emPC7XuRITr0iR3ApVA1IQCCLjnltiHmN26-TNi3LAQ&otpVerification=NO&lapId=srushti_halo_24092016"
+
+wget "http://localhost:10443/lapmanage/create/srushti-shlok?junoBusinessId=5196601515374561963&gSheetId=1emPC7XuRITr0iR3ApVA1IQCCLjnltiHmN26-TNi3LAQ&otpVerification=yes&lapId=srushti_shlok_24092016"
+
+https://docs.google.com/spreadsheets/d/1emPC7XuRITr0iR3ApVA1IQCCLjnltiHmN26-TNi3LAQ/edit#gid=0

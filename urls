@@ -1,0 +1,104 @@
+http://jam.askjuno.com:10443/addmofuuser
+http://jam.askjuno.com:10443/addsuperuser
+
+http://jam.askjuno.com:10443/addsupernav
+
+http://jam.askjuno.com:10443/addsupernav
+https://localhost:8443/login
+mofuadmin@askjuno.com/d@rw!nsm!th   
+https://jam.askjuno.com:9443/lap-template-view/Amara_appiontment_1
+https://jam.askjuno.com:9443/platform-invitation/3141362612946485859?platformType=GOOGLE
+172.105.58.31
+3141362612946485859
+
+https://vaadin.com/docs/v14/tools/designer/using-designer/designer-layout--->layout documents
+https://vaadin.com/docs/v14/flow/binding-data/tutorial-flow-components-binder-validation-->binder examples
+admin@askjuno.com/d@rw!nsm!th
+https://askjuno.atlassian.net/wiki/spaces/ADBUDDY/pages/565772425/Vaadin+14+components-->vaadin documentation 
+https://vaadin.com/docs/v14/flow/tutorial/handling-view-state---userlistingview link.
+https://javapapers.com/core-java/eclipse-shortcuts/-->shortcuts.
+https://vaadin.com/docs/v14/ds/components--->vaadin google document
+http://casey.store:9200/_cat/indices
+ 
+Left nav for business owner plus Shared with Me (Same for Lead Ops) 
+ 
+Home page for Account owner - Home page /Essentials
+
+$2a$10$TYSmkobzA8KpuEYdEkM/u.4JCJEXmYw/1.QB0axFfFWsWF5K0Vpau
+
+Home page for Account owner - Platform assets Download switchboard 
+ 
+Home page for Account owners Platform assets page below download switchboard
+http://casey.store:9200/_cat/indices
+
+<!-- https://mvnrepository.com/artifact/org.vaadin.addons/vaadin-combobox-multiselect -->
+
+		<dependency>
+   <groupId>com.vaadin.componentfactory</groupId>
+   <artifactId>multi-combo-box-flow</artifactId>
+   <version>0.4.0</version>
+</dependency>
+ 
+juno@gmail.com,password
+
+Left nav for Lead Ops Business details with handover button
+ 
+
+
+http://localhost:10443/addmofuuser
+http://localhost:10443/addsuperuser
+
+http://localhost:10443/addsupernav
+--spring.profiles.active=dev
+http://localhost:10443/addmofuleftnav
+http://localhost:10443/addaccmanagerleftnav
+http://localhost:10443/addaccownerleftnav
+http://localhost:10443/businessownerleftnav
+http://localhost:10443/leadopsleftnav
+--spring.profiles.active=dev
+https://jam.askjuno.com:8443/login
+
+Icecream configuration goals :clean vaadin:prepare-frontend vaadin:build-frontend install
+Casey Run Configuration Setup Goals:clean install
+
+
+		 
+		  action.auto_create_index to "true"
+
+https://vaadin.com/learn/tutorials/getting-started-with-flow/creating-live-filtering-for-entities--->filtersearch in userlistingview.
+
+
+production
+http://butterball.askjuno.com/addmofuleftnav
+
+For grid filter:	
+	/*
+ * private void prepareFilterFields() { HeaderRow headerRow =
+ * grid.appendHeaderRow(); roleFilter = gridTextFieldFilter("selctedItem",
+ * headerRow); }
+ * 
+ * private TextField gridTextFieldFilter(String columnKey, HeaderRow headerRow)
+ * { TextField roleselect = new TextField();
+ * roleselect.setValueChangeMode(ValueChangeMode.TIMEOUT);
+ * roleselect.addValueChangeListener(event -> this.onFilterChange());
+ * roleselect.setWidthFull();
+ * headerRow.getCell(grid.getColumnByKey(columnKey)).setComponent(roleselect);
+ * return roleselect; } private void onFilterChange(){
+ * ListDataProvider<CalepUser> dataProvider =
+ * DataProvider.ofCollection(this.users); grid.setDataProvider(dataProvider);
+ * dataProvider.setFilter(item -> { boolean roleFilterMatch = true;
+ * 
+ * 
+ * if(!roleFilter.isEmpty()){ roleFilterMatch =
+ * item.toString().contains(roleFilter.getValue()); }
+ * 
+ * return roleFilterMatch ; }); } 
+  */
+  
+  
+  
+  https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?access_type=offline&prompt=consent&response_type=code&client_id=915423219171-iufka3bqo9un6pd24i3pi8evjn5394e0.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fjam.askjuno.com%3A8443&scope=%20email%20profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcontacts%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadwords%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fbusiness.manage%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=secret625614&flowName=GeneralOAuthFlow
+ 
+		    
+		    
+		

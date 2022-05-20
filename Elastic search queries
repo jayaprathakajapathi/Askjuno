@@ -1,0 +1,128 @@
+DELETE a single column using elastic query:sometimes used match instead of term.
+POST /schema_profile/_delete_by_query
+{
+  "query": {
+    "term": {
+      "accountName": "jayapratha"
+    }
+  }
+}
+
+https://onecompiler.com/posts/3tukycfpr/updating-elasticsearch-field-value-with-a-query -->update a single column in elastic search.
+http://localhost:9200/_cat/aliases?v--->get alias from schema.
+curl localhost:9200/_aliases?pretty
+{
+  "info" : {
+    "aliases" : { }
+  }
+}
+PUT schema_profile-2909
+{
+  "aliases": {
+    "app-write": {
+      "is_write_index": true
+    }
+  }
+}
+
+GET schema_profile/_doc/ganesh@gmail.com
+POST /schema_profile/_delete_by_query
+{
+  "query": {
+    "match": {
+      "fullName": "kowsalya ramanatha"
+    }
+  }
+}
+
+PUT whatever_name_your_index_had-000001
+{
+  "aliases": {
+    "app-write": {
+      "is_write_index": true
+    }
+  }
+}
+curl -X PUT "localhost:9200/_cluster/settings?pretty" -H 'Content-Type: application/json' -d'{
+    "persistent": {
+        "action.auto_create_index": "YourIndexName,index10,-index1*,+ind*" 
+    }
+}'
+GET schema_menuitem/_search
+{"from" : 0, "size" : 1000,
+  "query": {
+    "match_all": {}
+  }
+  }
+  
+  PUT schema_menuitem/_mapping
+{
+  "properties": {
+    "owningRole": {
+      "type": "keyword"
+    }
+  }
+}
+GET /_analyze
+{
+  "analyzer" : "standard",
+  "text" : "Quick Brown Foxes!"
+}
+
+Delete a single column in schema::
+POST /schema_searchfilter/_delete_by_query
+{
+  "query": {
+    "term": {
+      "id": "f12db3fb-8642-4fab-95d8-b184ce925e5e"
+    }
+  }
+}
+ GET schema_menuitem/_search
+{
+  
+      "from":0,
+      "size":10000,
+      "explain":false,
+      "aggregations":{
+         "owningRole.agg":{
+            "terms":{
+               "field":"owningRole",
+               "size":10,
+               "min_doc_count":1,
+               "shard_min_doc_count":0,
+               "show_term_doc_count_error":false,
+               "order":[
+                  {
+                     "_count":"desc"
+                  },
+                  {
+                     "_key":""my_property" : {
+  "type": "keyword"
+}asc"
+                  }
+               ]
+            }
+         }
+      }
+
+}
+ 
+  
+  POST schema_business_tenant/_update_by_query
+{
+  "script": {
+    "source": "ctx._source.googSystemUserId='7480431868',ctx._source.googSystemLoginUserId='2367890776',ctx._source.googleSystemRefreshToken='1//0gy1HWrZJ76OTCgYIARAAGBASNwF-L9IrJg6T1sHpB7eliolKrRQTOJDlogwJT5li7Mtns-fZmHp9x8KMDoGFa4HB4axFeJTaXrg',,ctx._source.googSystemRefreshToken='1//0gy1HWrZJ76OTCgYIARAAGBASNwF-L9IrJg6T1sHpB7eliolKrRQTOJDlogwJT5li7Mtns-fZmHp9x8KMDoGFa4HB4axFeJTaXrg'",
+    "lang": "painless"
+  },
+  "query": {
+    "term": {
+      "id": "8888"
+    }
+  }
+}
+"ctx._source.googSystemLoginUserId='2367890776'",
+	"ctx._source.googSystemRefreshToken='1//0gy1HWrZJ76OTCgYIARAAGBASNwF-L9IrJg6T1sHpB7eliolKrRQTOJDlogwJT5li7Mtns-fZmHp9x8KMDoGFa4HB4axFeJTaXrg'",
+	"ctx._source.googleSystemRefreshToken='1//0gy1HWrZJ76OTCgYIARAAGBASNwF-L9IrJg6T1sHpB7eliolKrRQTOJDlogwJT5li7Mtns-fZmHp9x8KMDoGFa4HB4axFeJTaXrg'",
+	 "ctx._source.googSystemUserId='7480431868'",
+	 "ctx._source.googSystemLoginUserId='2367890776'",
